@@ -13,7 +13,6 @@ public class Colocviu1_13 extends AppCompatActivity {
     private EditText showCardinalPoints;
     private Button eastButton, westButton, northButton, southButton;
     private Button navigateToSecondaryActivityButton;
-    private int nrPressedCardinalButtons = 0;
     private int lastNrPressedCardinalButtons;
 
     private ButtonClickListener buttonClickListener = new ButtonClickListener();
@@ -23,7 +22,7 @@ public class Colocviu1_13 extends AppCompatActivity {
         public void onClick(View view) {
             switch(view.getId()) {
                 case R.id.east_button:
-                    nrPressedCardinalButtons++;
+                    lastNrPressedCardinalButtons++;
                     if (showCardinalPoints.getText().toString().trim().length() <= 0) {
                         showCardinalPoints.setText(showCardinalPoints.getText().toString() + EAST);
                     } else {
@@ -31,7 +30,7 @@ public class Colocviu1_13 extends AppCompatActivity {
                     }
                     break;
                 case R.id.west_button:
-                    nrPressedCardinalButtons++;
+                    lastNrPressedCardinalButtons++;
                     if (showCardinalPoints.getText().toString().trim().length() <= 0) {
                         showCardinalPoints.setText(showCardinalPoints.getText().toString() + WEST);
                     } else {
@@ -39,7 +38,7 @@ public class Colocviu1_13 extends AppCompatActivity {
                     }
                     break;
                 case R.id.north_button:
-                    nrPressedCardinalButtons++;
+                    lastNrPressedCardinalButtons++;
                     if (showCardinalPoints.getText().toString().trim().length() <= 0) {
                         showCardinalPoints.setText(showCardinalPoints.getText().toString() + NORTH);
                     } else {
@@ -47,7 +46,7 @@ public class Colocviu1_13 extends AppCompatActivity {
                     }
                     break;
                 case R.id.south_button:
-                    nrPressedCardinalButtons++;
+                    lastNrPressedCardinalButtons++;
                     if (showCardinalPoints.getText().toString().trim().length() <= 0) {
                         showCardinalPoints.setText(showCardinalPoints.getText().toString() + SOUTH);
                     } else {
@@ -90,7 +89,7 @@ public class Colocviu1_13 extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putInt(SAVED_NR_PRESSED_BUTTONS, nrPressedCardinalButtons);
+        savedInstanceState.putInt(SAVED_NR_PRESSED_BUTTONS, lastNrPressedCardinalButtons);
     }
 
     @Override
