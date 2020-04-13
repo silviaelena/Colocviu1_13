@@ -6,4 +6,6 @@
     <string name="south_button">SOUTH</string>
     <string name="north_east_south_west"></string>
     <string name="navigate_to_secondary_activity">NAVIGATE TO SECONDARY ACTIVITY</string>
+    <string name="register">Register</string>
+    <string name="cancel">Cancel</string>
 </resources>
