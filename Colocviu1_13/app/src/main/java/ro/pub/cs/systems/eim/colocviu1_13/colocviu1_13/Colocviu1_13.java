@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import static ro.pub.cs.systems.eim.colocviu1_13.colocviu1_13.Constants.*;
 
@@ -79,9 +80,6 @@ public class Colocviu1_13 extends AppCompatActivity {
 
         if (savedInstanceState != null) {
             lastNrPressedCardinalButtons = savedInstanceState.getInt(SAVED_NR_PRESSED_BUTTONS);
-            if (savedInstanceState.getString(SAVED_NR_PRESSED_BUTTONS) != null) {
-                lastNrPressedCardinalButtons = savedInstanceState.getInt(SAVED_NR_PRESSED_BUTTONS);
-            }
         }
 
     }
@@ -96,8 +94,5 @@ public class Colocviu1_13 extends AppCompatActivity {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         lastNrPressedCardinalButtons = savedInstanceState.getInt(SAVED_NR_PRESSED_BUTTONS);
-        if (savedInstanceState.getString(SAVED_NR_PRESSED_BUTTONS) != null) {
-            lastNrPressedCardinalButtons = savedInstanceState.getInt(SAVED_NR_PRESSED_BUTTONS);
-        }
     }
 }
