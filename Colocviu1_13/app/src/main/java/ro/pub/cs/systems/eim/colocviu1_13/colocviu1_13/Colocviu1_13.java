@@ -18,7 +18,7 @@ public class Colocviu1_13 extends AppCompatActivity {
     private Button eastButton, westButton, northButton, southButton;
     private Button navigateToSecondaryActivityButton;
     private int lastNrPressedCardinalButtons;
-    private String retainedString;
+    private String retainedString = "";
 
     private ButtonClickListener buttonClickListener = new ButtonClickListener();
     private class ButtonClickListener implements View.OnClickListener {
@@ -33,7 +33,7 @@ public class Colocviu1_13 extends AppCompatActivity {
                     } else {
                         showCardinalPoints.setText(showCardinalPoints.getText().toString() + ", " + EAST);
                     }
-//                    retainedString.concat(showCardinalPoints.getText().toString());
+                    retainedString += showCardinalPoints.getText().toString();
                     break;
                 case R.id.west_button:
                     lastNrPressedCardinalButtons++;
@@ -42,7 +42,7 @@ public class Colocviu1_13 extends AppCompatActivity {
                     } else {
                         showCardinalPoints.setText(showCardinalPoints.getText().toString() + ", " + WEST);
                     }
-//                    retainedString.concat(showCardinalPoints.getText().toString());
+                    retainedString += showCardinalPoints.getText().toString();
                     break;
                 case R.id.north_button:
                     lastNrPressedCardinalButtons++;
@@ -51,7 +51,7 @@ public class Colocviu1_13 extends AppCompatActivity {
                     } else {
                         showCardinalPoints.setText(showCardinalPoints.getText().toString() + ", " + NORTH);
                     }
-//                    retainedString.concat(showCardinalPoints.getText().toString());
+                    retainedString += showCardinalPoints.getText().toString();
                     break;
                 case R.id.south_button:
                     lastNrPressedCardinalButtons++;
@@ -60,12 +60,12 @@ public class Colocviu1_13 extends AppCompatActivity {
                     } else {
                         showCardinalPoints.setText(showCardinalPoints.getText().toString() + ", " + SOUTH);
                     }
-//                    retainedString.concat(showCardinalPoints.getText().toString());
+                    retainedString += showCardinalPoints.getText().toString();
                     break;
                 case R.id.navigate_to_secondary_activity_button:
                     Intent myIntent = new Intent(getApplicationContext(), Colocviu1_13SecondaryActivity.class);
-//                    myIntent.putExtra(RETAINED_STRING, retainedString);
-//                    startActivityForResult(myIntent, SECONDARY_ACTIVITY_REQUEST_CODE);
+                    myIntent.putExtra(RETAINED_STRING, retainedString);
+                    startActivityForResult(myIntent, SECONDARY_ACTIVITY_REQUEST_CODE);
                     lastNrPressedCardinalButtons = 0;
                     break;
             }

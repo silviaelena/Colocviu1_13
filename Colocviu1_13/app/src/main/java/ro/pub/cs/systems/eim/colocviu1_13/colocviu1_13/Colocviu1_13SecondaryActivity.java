@@ -42,6 +42,8 @@ public class Colocviu1_13SecondaryActivity extends AppCompatActivity {
         cancelButton = (Button)findViewById(R.id.cancel_button);
         cancelButton.setOnClickListener(buttonClickListener);
 
+        showText.setText("");
+
         Intent myIntent = getIntent();
         if (myIntent != null && myIntent.getExtras().containsKey(RETAINED_STRING)) {
             showText.setText(myIntent.getStringExtra(RETAINED_STRING));
