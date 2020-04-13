@@ -4,6 +4,6 @@
     <string name="west_button">WEST</string>
     <string name="north_button">NORTH</string>
     <string name="south_button">SOUTH</string>
-    <string name="north_east_south_west">North, East, South, West</string>
+    <string name="north_east_south_west"></string>
     <string name="navigate_to_secondary_activity">NAVIGATE TO SECONDARY ACTIVITY</string>
 </resources>
