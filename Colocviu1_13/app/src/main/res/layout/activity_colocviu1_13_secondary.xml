@@ -7,7 +7,7 @@
     tools:context="ro.pub.cs.systems.eim.colocviu1_13.colocviu1_13.Colocviu1_13SecondaryActivity">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/show_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:enabled="false"
